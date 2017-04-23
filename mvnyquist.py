@@ -6,8 +6,12 @@ w = numpy.logspace(-2, 2, 1000)
 alls = 1j*w
 I = numpy.eye(2, 2)
 
+
 def G(s):
-    return 1/((s + 1)*(s + 2)*(s - 1)) * numpy.matrix([[(s-1)*(s+2), (s-1)**2], [-(s+1)*(s+2), (s-1)*(s+1)]])
+    G = (1/((s + 1)*(s + 2)*(s - 1)) *
+         numpy.matrix([[(s-1)*(s+2), (s-1)**2], [-(s+1)*(s+2), (s-1)*(s+1)]]))
+    return G
+
 
 def K(s):
     return I
