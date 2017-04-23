@@ -12,6 +12,6 @@ for k in Ks:
     S = 1 - T
     plt.loglog(w, abs(S))
 plt.legend(["k = %1.1f" % K for K in Ks], loc=2)
-plt.xlabel('Frequency')        
+plt.xlabel('Frequency')
 plt.ylabel('Magnitude $|S|$')
 plt.show()
