@@ -46,7 +46,8 @@ def possibilities(umin, umax, Amount):
 
 if __name__ == '__main__':
 
-    #for example a matrix of the minimum and maximum values of a certain set of parameters
+    # For example a matrix of the minimum and maximum values of a certain
+    # set of parameters
     umin = [0, 0, 10]
     umax = [1, 1, 20]
 
