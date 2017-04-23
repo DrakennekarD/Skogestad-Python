@@ -24,9 +24,7 @@ plt.loglog(w, [abs(G(thisw)) for thisw in w], color="green", label="|G|")
 plt.loglog(w, [abs(Gd(thisw)) for thisw in w], color="black", label="|Gd|")
 plt.loglog(w, np.ones(len(w)), '-.')
 plt.legend(loc=1)
-#plt.title('|G| & |Gd| over frequency')
-plt.xlabel('frequency [rad/s]')
+plt.title('|G| & |Gd| Over Frequency')
+plt.xlabel('Frequency [rad/s]')
 plt.ylabel('Magnitude')
 plt.show()
-
-
