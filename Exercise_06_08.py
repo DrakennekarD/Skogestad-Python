@@ -16,8 +16,8 @@ s = 1j*w
 
 
 def G(s):
-    return (1/(s** 2 + 100))*np.matrix([[(1/(0.01*s + 1)), 1],
-                                             [((s + 0.1)/(s + 1)), 1]])
+    return (1/(s**2 + 100))*np.matrix([[(1/(0.01*s + 1)), 1],
+                                       [((s + 0.1)/(s + 1)), 1]])
 
 
 def g11(s):
@@ -54,7 +54,8 @@ plt.ylabel(r'Magnitude', fontsize=15)
 plt.loglog(w, abs(l11))
 plt.loglog(w, abs(l21))
 plt.grid(b=None, which='both', axis='both')
-plt.legend((r'$\lambda_{11}/\lambda_{22} $', r"$\lambda_{12}/\lambda_{21}$"), loc=2)
+plt.legend((r'$\lambda_{11}/\lambda_{22} $',
+            r"$\lambda_{12}/\lambda_{21}$"), loc=2)
 plt.figure(2)
 plt.title('SVD Values over Frequency')
 plt.xlabel(r'Frequency [rad/s]', fontsize=14)
