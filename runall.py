@@ -8,12 +8,13 @@ from collections import Counter
 import sys
 import time
 import logging
+import matplotlib.pyplot as plt
 
 logging.basicConfig(level=logging.DEBUG)
 
 # disable show in figures
-import matplotlib.pyplot as plt
 plt.show = lambda: None
+
 
 # disable print
 def print(*args):
@@ -62,7 +63,10 @@ if __name__ == "__main__":
             statuscounter[status] += 1
 
             if status != NOTIMPLEMENTED:
-                logging.info(' '.join(str(thing) for thing in [kind, chapter, number, status]))
+                logging.info(' '.join(str(thing) for thing in [kind,
+                                                               chapter,
+                                                               number,
+                                                               status]))
 
             if status == FAILED:
                 faillist.append([kind, chapter, number])
