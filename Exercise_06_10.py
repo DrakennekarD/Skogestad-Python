@@ -35,9 +35,10 @@ G_rhp_zeros = utils.RHPonly(G_zeros)
 pairing1 = np.asmatrix(np.eye(2))
 pairing2 = np.asmatrix(pairing1[[1, 0]])
 
-utilsplot.rga_nm_plot(G, pairing_list=[pairing1, pairing2], 
-                      pairing_names=['Diagonal pairing', 'Off diagonal pairing'],
-                        w_start=-3, w_end=3, points=1000, plot_type='all')
+utilsplot.rga_nm_plot(G, pairing_list=[pairing1, pairing2],
+                      pairing_names=['Diagonal pairing',
+                                     'Off diagonal pairing'],
+                      w_start=-3, w_end=3, points=1000, plot_type='all')
 
 # RGA Number of Off-diagonal pairing exhibits the lowest RGA Number for w < wB*
 
@@ -54,7 +55,7 @@ for i in range(len(w)):
     Sv_G_min[i] = np.min(Sv_G[i, :])
     if w[i] > 0.05 and wB_index == 0:
         wB_index = i
-        
+
 figure = plt.figure()
 plt.hold
 plt.loglog(w, Sv_G_min, label='$\sigma_{min}(G)$')
@@ -65,7 +66,8 @@ plt.ylabel('Magnitude')
 
 plt.show()
 
-# Note that minimum singular value of G(iw) where w < wB* is located at steady state (w=0)
+# Note that minimum singular value of G(iw) where w < wB* is
+# located at steady state (w=0)
 
 u, _, _ = np.linalg.svd(G(0))
 
