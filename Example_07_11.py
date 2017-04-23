@@ -19,11 +19,13 @@ plt.loglog(w, np.abs(1/(1 + GK2(s))), label='$S_2$')
 
 for i in range(np.size(ru)):
     if i == 1:
-        plt.loglog(w, 1/(np.abs(WP(s)) + np.abs(ru[i]*WU(s))), 'k--', label='varying $r_u$')
+        plt.loglog(w, 1/(np.abs(WP(s)) + np.abs(ru[i]*WU(s))),
+                   'k--', label='varying $r_u$')
     else:
         plt.loglog(w, 1/(np.abs(WP(s)) + np.abs(ru[i]*WU(s))), 'k--')
 
-plt.loglog(w, 1/(np.abs(WP(s)) + np.abs(0.75*WU(s))), 'r', label='$r_u$ = 0.75')
+plt.loglog(w, 1/(np.abs(WP(s)) + np.abs(0.75*WU(s))), 'r',
+           label='$r_u$ = 0.75')
 plt.legend(loc=2)
 plt.title(r'Figure 7.19')
 plt.xlabel(r'Frequency [rad/s]', fontsize=14)
