@@ -5,7 +5,6 @@ Created on Mon Jun 03 23:16:52 2013
 @author: Irshad
 """
 
-#Figure 7.8
 from numpy import exp, logspace, abs, ones
 import matplotlib.pyplot as plt
 
@@ -35,4 +34,3 @@ for function, func_string, max_param in func:
     setup_bode(function, func_string, max_param, w)
 
 plt.show()
-
