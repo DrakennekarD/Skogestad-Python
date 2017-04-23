@@ -5,11 +5,11 @@ Created on Mon Jun 03 19:36:05 2013
 @author: Irshad
 """
 
-"This code plots figure 5.5"
-
 import numpy as np
 import matplotlib.pyplot as plt
 import doc_func as df
+
+"This code plots figure 5.5"
 
 w = np.linspace(0.001, 6, 1000)
 s = 1j * w
@@ -37,6 +37,5 @@ func_list = [[freqrespS1, '-'],
              [freqrespS2, '-'],
              [np.ones(len(w)), 'r-.']]
 
-
-df.setup_bode_plot('|S1| and |S2| Value over Frequency', w, func_list, ('S1', 'S2', 'Gain Value of 1'), plt.semilogy)
-
+df.setup_bode_plot('|S1| and |S2| Value over Frequency', w,
+                   func_list, ('S1', 'S2', 'Gain Value of 1'), plt.semilogy)
