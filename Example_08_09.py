@@ -8,6 +8,7 @@ import utils
 
 I = np.identity(2)
 
+
 def KG(s):
     Ggain = np.matrix([[-87.8, 1.4],
                        [-108.2, -1.4]])
@@ -32,8 +33,10 @@ def M(s):
 def maxsigma(G):
     return max(utils.sigmas(G))
 
+
 def specrad(G):
     return max(np.abs(np.linalg.eigvals(G)))
+
 
 def mu_ubound(G):
     """ We use equation 8.87 and minimise directly
@@ -50,7 +53,9 @@ s = 1j * omega
 
 T_Is = list(map(T_I, s))
 
-print('Robust Stability (RS) is attained if mu(T_I(jw)) < 1/|w_I(jw)| for all applicable omega range')
+print('Robust Stability (RS) is attained if mu(T_I(jw)) < 1/|w_I(jw)| '
+      'for all applicable omega range')
+
 
 def F_of_T_I(func):
     return [func(T) for T in T_Is]
