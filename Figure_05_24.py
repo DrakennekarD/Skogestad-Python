@@ -16,4 +16,3 @@ for n in [1, 2, 3, 4]:
     plt.legend(('n=1', 'n=2', 'n=3', 'n=4'), loc=6)
 
 plt.show()
-
