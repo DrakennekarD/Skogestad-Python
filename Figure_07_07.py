@@ -55,6 +55,7 @@ r2 = np.max(np.abs(g2 - g0))
 [c2x, c2y] = circle(np.real(g2), np.imag(g2), r2)
 plt.plot(c2x, c2y, 'g')
 
+
 # M3 Nominal model corresponding to the smallest radius
 def maxrad(g):
     g = complex(*g)
