@@ -4,8 +4,10 @@ import matplotlib.pyplot as plt
 
 from utils import tf
 
+
 def funG(s):
     return 200/((10*s + 1)*(0.05*s + 1)**2)
+
 
 def funGd(s):
     return 100/(10*s + 1)
@@ -16,12 +18,12 @@ Gdfr = funGd(s)
 u = np.ones(len(w))
 
 plt.figure('Graphical solution to find wc')
-plt.semilogx(w, np.abs(Gdfr),label='$G_d$')
+plt.semilogx(w, np.abs(Gdfr), label='$G_d$')
 plt.semilogx(w, u, label='1')
 plt.ylabel('Magnitude')
 plt.xlabel('Frequency (rad/s)')
 plt.legend()
-plt.axis([None,None,0,10])
+plt.axis([None, None, 0, 10])
 
 # numeric solution to find wc
 wc = w[np.flatnonzero(np.abs(Gdfr) < 1)[0]]
