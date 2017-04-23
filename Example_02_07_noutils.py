@@ -17,7 +17,9 @@ Tden = [tau, tau*z + 1, z]
 
 # This was left as in existing example
 # Time domain output of a step response
-[Tim, yout, xout] = scs.lsim((Tnum, Tden), numpy.ones(numpy.size(omega)), omega)
+[Tim, yout, xout] = scs.lsim((Tnum, Tden),
+                             numpy.ones(numpy.size(omega)),
+                             omega)
 # Plot time domain response
 plt.subplot(2, 1, 1)
 plt.plot(Tim, yout)
@@ -60,4 +62,3 @@ print("GM is = " + str(numpy.round(1/AR_180, 1)))
 print("PM is = " + str(numpy.round(PM, 1)))
 print("Ms is = " + str(Ms))
 print("Mt is = " + str(Mt))
-
