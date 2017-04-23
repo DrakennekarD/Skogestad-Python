@@ -38,5 +38,3 @@ fig = plt.gcf()
 BG = fig.patch
 BG.set_facecolor('white')
 plt.show()
-
-
