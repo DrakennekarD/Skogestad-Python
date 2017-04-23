@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 from utils import tf
 
-s = tf([1,0], 1)
+s = tf([1, 0], 1)
 
 # Set-up plant and Disturbance model
 G = 200/((10*s + 1)*(0.05*s + 1)*(0.05*s + 1))
@@ -52,4 +52,3 @@ plt.title("Disturbance response")
 plt.legend(["y0", "y1", "y2", "y3"])
 
 plt.show()
-
