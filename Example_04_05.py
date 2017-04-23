@@ -33,10 +33,10 @@ control_matrix = np.hstack(c_plus)
 C_matrix = sympy.Matrix(np.zeros_like(A))
 for r in range(0, A.shape[1]):
     for c in range(A.shape[1]):
-        C_matrix[r,c] = control_matrix[r,c]
-            
-print('\nRank of controllability matix =', C_matrix.rank())                      
-if C_matrix.rank() == C_matrix.shape[1] :
+        C_matrix[r, c] = control_matrix[r, c]
+
+print('\nRank of controllability matix =', C_matrix.rank())
+if C_matrix.rank() == C_matrix.shape[1]:
     print('Controllability', C_matrix,
           '\nhas full rank and is state controllable')
 else:
