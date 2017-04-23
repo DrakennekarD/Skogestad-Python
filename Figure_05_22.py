@@ -5,7 +5,6 @@ Created on Mon Jun 03 18:50:50 2013
 @author: Irshad
 """
 from __future__ import division
-#Figure 5.22
 import numpy as np
 import matplotlib.pyplot as plt
 import doc_func as df
@@ -31,4 +30,5 @@ func_list = [[np.abs(freqrespG), '-'],
              [np.ones(len(w)), 'r-.']]
 
 plt.vlines(2500, 10**(-2), 1, color='m', linestyle='dashed')
-df.setup_bode_plot('|G| and |Gd| Value over Frequency', w, func_list, legend=('G', 'Gd', 'Gain Value of 1', 'wd'))
+df.setup_bode_plot('|G| and |Gd| Value over Frequency', w, func_list,
+                   legend=('G', 'Gd', 'Gain Value of 1', 'wd'))
