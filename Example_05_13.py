@@ -5,7 +5,7 @@ from utilsplot import step_response_plot
 from utils import feedback, tf
 
 
-s = tf([1,0], 1)
+s = tf([1, 0], 1)
 
 Kd = 0.5
 
@@ -35,7 +35,8 @@ plt.ylabel('Magnitude')
 plt.legend(('$|G|$', '$|G_d|$'), loc=1)
 
 plt.subplot(1, 2, 2)
-step_response_plot(S, Gu, t_end=10, constraint=1)  # TODO y(t)const is not yet correct
+# TODO y(t)const is not yet correct
+step_response_plot(S, Gu, t_end=10, constraint=1)
 plt.title('(b) Response to step in disturbance ($k_d=0.5$)')
 
 plt.show()
