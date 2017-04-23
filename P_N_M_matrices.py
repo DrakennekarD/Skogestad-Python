@@ -7,7 +7,6 @@ Created on Thu May 09 18:25:34 2013
 from __future__ import print_function
 import scipy.linalg as sc_lin
 import numpy as np
-import numpy.matlib
 
 # Calculates the P, N and M matrices for the six different kinds
 # of unstructured uncertainty in MIMO systems.
@@ -123,42 +122,42 @@ for k in range(len(omega)):
 
     if FORM == 1:
         # Define matrix P for additive uncertainty form
-        
+
         Ps = np.array([[Z, Z,  Wg(s)],
                        [Wp(s), Wp(s), Wp(s)*G(s)],
                        [-I, -I, -G(s)]])
 
     if FORM == 2:
         # Define matrix P for multiplicative input uncertainty form
-        
+
         Ps = np.array([[Z, Z,  Wg(s)],
                        [Wp(s)*G(s), Wp(s), Wp(s)*G(s)],
                        [-G(s), -I, -G(s)]])
 
     if FORM == 3:
         # Define matrix P for multiplicative output uncertainty form
-        
+
         Ps = np.array([[Z, Z,  Wg(s)*G(s)],
                        [Wp(s), Wp(s), Wp(s)*G(s)],
                        [-I, -I, -G(s)]])
 
     if FORM == 4:
         # Define matrix P for inverse additive uncertainty form
-        
+
         Ps = np.array([[G(s)*Wg(s), Z,  G(s)],
                        [Wp(s)*G(s)*Wg(s), Wp(s), Wp(s)*G(s)],
                        [-G(s)*Wg(s), -I, -G(s)]])
 
     if FORM == 5:
         # Define matrix P for inverse multiplicative uncertainty form
-        
+
         Ps = np.array([[Wg(s), Z,  I],
                        [Wp(s)*G(s)*Wg(s), Wp(s), Wp(s)*G(s)],
                        [-G(s)*Wg(s), -I, -G(s)]])
 
     if FORM == 6:
         # Define matrix P for inverse multiplicative uncertainty form
-        
+
         Ps = np.array([[Wg(s), Z,  G(s)],
                        [Wp(s)*Wg(s), Wp(s), Wp(s)*G(s)],
                        [-Wg(s), -I, -G(s)]])
