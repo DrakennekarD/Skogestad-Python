@@ -154,7 +154,6 @@ def weight_calc_dec(w_start, w_end, li, weight_i, steps):
 #            i = k + z + index
 #            l_mod[i] = max_val
 
-
     # Must change a, b, and c in weight to fit to l_mod
 
     popt, pcov = op.curve_fit(weight_i, w * 1j, l_mod, [0.5, 0.5, 0.5])
@@ -170,7 +169,6 @@ def weight_calc_dec(w_start, w_end, li, weight_i, steps):
     # Nuquist plot with perturbed plant models generating all
     # possible plants Nuquist plots using method outlined in 7.4.3
     # pg 268-271 Skogestad
-
 
     #################
     # Use of state space descriptions
